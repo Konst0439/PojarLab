@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Пожарная лаборатория</title>
+</head>
+<style>
+#main {
+position:relative;
+margin: 10px auto;
+padding:5px;
+width:900px;
+height:560px;
+background-color: silver;
+border: 5px solid grey;
+border-radius:15px;    
+    }
+ #scr {
+     margin:20px auto;
+     width:900px;
+     height:520px;
+     margin-top:20px;
+     background-color: white;
+     background-size:cover;
+     border:2px solid black;
+     border-radius:10px;
+    }
+    button{
+     position: absolute;
+      top:150px;
+     width:25px;
+      height:70px;
+      font: 12pt arial,tahoma,sans-serif;
+      text-align: center; 
+    }
+        .left {
+      left:5px;
+    }
+.right {
+right:5px;
+    }
+</style>
+<script>
+var slider = {
+    slides:["https://thumb.cloud.mail.ru/weblink/thumb/xw1/ei21/p19VVNuJg","https://thumb.cloud.mail.ru/weblink/thumb/xw1/Sf8X/TB2jVuF9x","https://thumb.cloud.mail.ru/weblink/thumb/xw1/8boc/HDzYyrNVX","https://thumb.cloud.mail.ru/weblink/thumb/xw1/j4W5/xVPG33vnx","https://thumb.cloud.mail.ru/weblink/thumb/xw1/pMUk/ze7bJVREc","https://thumb.cloud.mail.ru/weblink/thumb/xw1/HL5P/NzXQSYdcR","https://thumb.cloud.mail.ru/weblink/thumb/xw1/Z1jH/ikssRa2ZY","https://thumb.cloud.mail.ru/weblink/thumb/xw1/xuME/YReJiEKLB","https://thumb.cloud.mail.ru/weblink/thumb/xw1/vqDy/bTtj66AxN","https://thumb.cloud.mail.ru/weblink/thumb/xw1/vyei/GHfTUVR8V","https://thumb.cloud.mail.ru/weblink/thumb/xw1/A6F4/97bzoEPfe","https://thumb.cloud.mail.ru/weblink/thumb/xw1/jDd7/4UTCTuSwV","https://thumb.cloud.mail.ru/weblink/thumb/xw1/mq8k/Xq48uhgEn"],
+    frame:0,
+    set: function (image){
+    document.getElementById("scr").style.backgroundImage ="url("+image+")";
+},
+    init: function() {
+        this.set(this.slides[this.frame]);
+    },
+left: function(){
+    this.frame--;
+    if(this.frame<0) this.frame=this.slides.length-1;
+    this.set(this.slides[this.frame]);
+},
+ right: function(){
+  this.frame++;
+     if(this.frame==this.slides.length) this.frame=0;
+     this.set(this.slides[this.frame]);
+ }   
+};
+window.onload= function() {
+   slider.init();
+    setInterval (function(){
+        slider.right();
+    },2000);
+};
+  </script>
+<body>
+<img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/idxE/yYExDRLU4">
+<a href="https://thumb.cloud.mail.ru/weblink/thumb/xw1/2L3T/LTKUdUv6r"><img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/hA7B/cj2ABrua1"></a> 
+<a href="https://thumb.cloud.mail.ru/weblink/thumb/xw1/PEfw/WuNoaaE9d"><img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/n3jK/WvdyShq6x"></a> 
+<a href="https://thumb.cloud.mail.ru/weblink/thumb/xw1/PamL/27x5MtUe1"><img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/KxDp/QjMxS3rDT"></a> 
+<a href="https://thumb.cloud.mail.ru/weblink/thumb/xw1/W8i7/sRQBHHFFo"><img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/2DkL/Sn8rxTeM6"></a> 
+<br>
+  
+<div id="main">
+    <button class="left" onclick="slider.left();"><</button>
+        <div id="scr"></div> 
+    <button class="right" onclick="slider.right();">></button>    
+</div> 
+
+</body>
+<img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/oLTc/u5BSsPDwV">
+</html>
